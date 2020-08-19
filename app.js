@@ -9,12 +9,15 @@ api           = require('novelcovid');
 // APP SETUP
 // =========
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 // ==========
 // APP ROUTES
 // ==========
 app.get("/", (req, res) => {
-    res.render("index");
+    api.all().then(function(allData) {
+        res.render("index", {allData: allData});
+    });
 });
 
 app.get("*", (req, res) => {

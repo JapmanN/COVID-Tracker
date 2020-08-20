@@ -1,5 +1,11 @@
 /* ======================================== */
 /* APPLY THESE STYLES TO THE ENTIRE WEBPAGE */
 /* ======================================== */
-body {font-family: 'Poppins', sans-serif;}
+body {background: #222222; font-family: 'Poppins', sans-serif; color: rgb(136, 146, 176);}
 h3 {font-weight: 600;}
+
+/* STYLES TO SPECIFIC CLASSES */
+.header {display: flex; align-items: center;}
+.jumbotron {background: none !important;}
+.display-4 {color: rgb(204, 214, 246); font-weight: 600;}
+.badge {color: rgb(0, 25, 47); background:rgba(138, 200, 255, 1); font-weight: 600;}

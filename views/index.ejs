@@ -14,23 +14,46 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
         <!-- Webpage Title -->
         <title>COVID-19 Tracker</title>
     </head>
     <body>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row header">
+                    <div class="col-lg-6">
+                        <span class="badge badge-danger py-2 px-3 rounded-pill mb-3">COVID-19 Tracker made by Japman Nagra</span>
+                        <h1 class="display-4">Stay Home.<br> Stay Safe.</h1>
+                        <p class="pr-5">The Coronavirus (COVID-19) is an highly infectious disease that has created a global health crisis. Use the metrics below to learn more about the Coronavirus.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="../assets/medicine.svg" alt="COVID-19 Tracker" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
         <div class="container">
-            <div class="row text-center">
-                <div class="col-sm">
+            <div class="row text-center shadow-lg pt-3 rounded-pill" style="background: #333333;">
+                <div class="col-sm my-3">
                     <h3 class="text-warning"><%= allData.cases.toLocaleString() %></h3>
-                    <p>Total cases</p>
+                    <p>Confirmed Cases</p>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm my-3">
+                    <h3 class="text-info"><%= allData.active.toLocaleString() %></h3>
+                    <p>Active Cases</p>
+                </div>
+                <div class="col-sm my-3">
                     <h3 class="text-danger"><%= allData.deaths.toLocaleString() %></h3>
-                    <p>Total deaths</p>
+                    <p>Worldwide Deaths</p>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm my-3">
                     <h3 class="text-primary"><%= allData.recovered.toLocaleString() %></h3>
-                    <p>Total recoveries</p>
+                    <p>Recovered Cases</p>
                 </div>
             </div>
         </div>

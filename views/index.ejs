@@ -21,7 +21,7 @@
         <title>COVID-19 Tracker</title>
     </head>
     <body>
-        <div class="jumbotron">
+        <div class="jumbotron mb-0">
             <div class="container">
                 <div class="row header">
                     <div class="col-lg-6">
@@ -39,40 +39,54 @@
         
 
         <div class="container">
-            <!-- <div class="row dropdown">
-                <button class="btn dropdown-toggle mb-1 btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #333333; color: rgb(136, 146, 176);">
-                    Type of stats
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" selected>Worldwide stats</a>
-                    <a class="dropdown-item" href="#">Today's stats</a>
-                    <a class="dropdown-item" href="#">Yesterday's stats</a>
-                </div>
-            </div> -->
-            <div class="row text-center shadow-lg pt-3 rounded-pill" style="background: #333333;">
+
+            <select name="" id="StatsDropdown" class="row background_dark rounded-pill px-2 py-2 mb-2 ml-2">
+                <option selected>Worldwide</option>
+                <option>Today</option>
+            </select>
+
+            <div class="row text-center shadow-lg pt-3 rounded-pill background_dark mb-5">
                 <div class="col-sm my-3">
-                    <h3 class="text-warning"><%= allData.cases.toLocaleString() %></h3>
-                    <p>Confirmed Cases</p>
-                </div>
-                <div class="col-sm my-3">
-                    <h3 class="text-info"><%= allData.active.toLocaleString() %></h3>
-                    <p>Active Cases</p>
+                    <!-- WORLDWIDE CASES -->
+                    <h3 class="text-warning globalStats"><%= allData.cases.toLocaleString() %></h3>
+                    <p class="globalStats">Confirmed Cases</p>
+
+                    <!-- TODAY'S CASES -->
+                    <h3 class="text-warning todayStats d-none"><%= allData.todayCases.toLocaleString() %></h3>
+                    <p class="todayStats d-none">Today's Cases</p>
                 </div>
                 <div class="col-sm my-3">
-                    <h3 class="text-danger"><%= allData.deaths.toLocaleString() %></h3>
-                    <p>Worldwide Deaths</p>
+                    <!-- ACTIVE CASES -->
+                    <h3 class="text-info globalStats"><%= allData.active.toLocaleString() %></h3>
+                    <p class="globalStats">Active Cases</p>
+
+                    <!-- CRITICAL CASES -->
+                    <h3 class="text-info todayStats d-none"><%= allData.critical.toLocaleString() %></h3>
+                    <p class="todayStats d-none">Critical Cases</p>
                 </div>
                 <div class="col-sm my-3">
-                    <h3 class="text-primary"><%= allData.recovered.toLocaleString() %></h3>
-                    <p>Recovered Cases</p>
+                    <!-- WORLDWIDE CASES -->
+                    <h3 class="text-danger globalStats"><%= allData.deaths.toLocaleString() %></h3>
+                    <p class="globalStats">Worldwide Deaths</p>
+
+                    <!-- TODAY'S CASES -->
+                    <h3 class="text-danger todayStats d-none"><%= allData.todayDeaths.toLocaleString() %></h3>
+                    <p class="todayStats d-none">Today's Deaths</p>
+                </div>
+                <div class="col-sm my-3">
+                    <!-- WORLDWIDE CASES -->
+                    <h3 class="text-primary globalStats"><%= allData.recovered.toLocaleString() %></h3>
+                    <p class="globalStats">Recovered Cases</p>
+
+                    <!-- TODAY'S CASES -->
+                    <h3 class="text-primary todayStats d-none"><%= allData.todayRecovered.toLocaleString() %></h3>
+                    <p class="todayStats d-none">Recovered Today</p>
                 </div>
             </div>
         </div>
 
-        <br><br>
-
         <div class="container table-responsive">
-            <table class="table text-center">
+            <table class="table text-center mt-1">
                 <thead>
                     <tr class="table-head">
                         <th scope="col">Ranking</th>
@@ -100,12 +114,12 @@
             </table>            
         </div>
 
-
-
-        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <!-- Custom JavaScript -->
+        <script src="./scripts/script.js"></script>
     </body>
 </html>

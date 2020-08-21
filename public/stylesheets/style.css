@@ -3,6 +3,11 @@
 /* ======================================== */
 body {background: #222222; font-family: 'Poppins', sans-serif; color: rgb(136, 146, 176);}
 h3 {font-weight: 600;}
+td {color: rgb(136, 146, 176);}
+
+/* TABLE STYLES */
+tr.table-head {color: rgb(204, 214, 246);}
+tbody.table-body {color: rgb(136, 146, 176); font-size: 0.9rem;}
 
 /* STYLES TO SPECIFIC CLASSES */
 .header {display: flex; align-items: center;}

@@ -27,7 +27,8 @@
                     <div class="col-lg-6">
                         <span class="badge badge-danger py-2 px-3 rounded-pill mb-3">COVID-19 Tracker made by Japman Nagra</span>
                         <h1 class="display-4">Stay Home.<br> Stay Safe.</h1>
-                        <p class="pr-5">The Coronavirus (COVID-19) is an highly infectious disease that has created a global health crisis. Use the metrics below to learn more about the Coronavirus.</p>
+                        <p class="pr-5">The Coronavirus (COVID-19) is a highly infectious disease that has created a global health crisis. Use the metrics below to learn more about the Coronavirus.</p>
+                        <!-- <a href="" class="btn btn-dark btn-sm">Learn more</a> -->
                     </div>
                     <div class="col-lg-6">
                         <img src="../assets/medicine.svg" alt="COVID-19 Tracker" class="img-fluid">
@@ -38,6 +39,16 @@
         
 
         <div class="container">
+            <!-- <div class="row dropdown">
+                <button class="btn dropdown-toggle mb-1 btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #333333; color: rgb(136, 146, 176);">
+                    Type of stats
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" selected>Worldwide stats</a>
+                    <a class="dropdown-item" href="#">Today's stats</a>
+                    <a class="dropdown-item" href="#">Yesterday's stats</a>
+                </div>
+            </div> -->
             <div class="row text-center shadow-lg pt-3 rounded-pill" style="background: #333333;">
                 <div class="col-sm my-3">
                     <h3 class="text-warning"><%= allData.cases.toLocaleString() %></h3>
@@ -57,6 +68,39 @@
                 </div>
             </div>
         </div>
+
+        <br><br>
+
+        <div class="container table-responsive">
+            <table class="table text-center">
+                <thead>
+                    <tr class="table-head">
+                        <th scope="col">Ranking</th>
+                        <th scope="col">Countries</th>
+                        <th scope="col">Cases</th>
+                        <th scope="col">Active</th>
+                        <th scope="col">Critical</th>
+                        <th scope="col">Deaths</th>
+                        <th scope="col">Recovered</th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <% for(var i = 0; i < countries.length; i++) { %>
+                        <tr>
+                            <th scope="row""><%= i+1 %></th>
+                            <td><%= countries[i].country %></td>
+                            <td class="text-warning"><%= countries[i].cases.toLocaleString() %></td>
+                            <td class="text-info"><%= countries[i].active.toLocaleString() %></td>
+                            <td class="text-light"><%= countries[i].critical.toLocaleString() %></td>
+                            <td class="text-danger"><%= countries[i].deaths.toLocaleString() %></td>
+                            <td class="text-primary"><%= countries[i].recovered.toLocaleString() %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>            
+        </div>
+
+
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

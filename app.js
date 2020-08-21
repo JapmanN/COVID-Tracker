@@ -16,7 +16,9 @@ app.use(express.static(__dirname + "/public"));
 // ==========
 app.get("/", (req, res) => {
     api.all().then(function(allData) {
-        res.render("index", {allData: allData});
+        api.countries({sort:'cases'}).then(function(countries) {
+            res.render("index", {allData: allData, countries: countries});
+        });
     });
 });
 

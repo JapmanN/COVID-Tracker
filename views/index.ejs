@@ -25,10 +25,10 @@
             <div class="container">
                 <div class="row header">
                     <div class="col-lg-6">
-                        <span class="badge badge-danger py-2 px-3 rounded-pill mb-3">COVID-19 Tracker made by Japman Nagra</span>
+                        <span class="badge badge-danger py-2 px-3 rounded-pill mb-3">COVID-19 Tracker by Japman Nagra</span>
                         <h1 class="display-4">Stay Home.<br> Stay Safe.</h1>
-                        <p class="pr-5">The Coronavirus (COVID-19) is a highly infectious disease that has created a global health crisis. Use the metrics below to learn more about the Coronavirus.</p>
-                        <!-- <a href="" class="btn btn-dark btn-sm">Learn more</a> -->
+                        <p class="pr-lg-5">The Coronavirus (COVID-19) is a highly infectious disease that has created a global health crisis. Use the metrics below to learn more about the Coronavirus.</p>
+                        <a href="https://github.com/JapmanN/COVID-Tracker" class="btn btn-dark btn-sm mb-4" target="_blank">Github page</a>
                     </div>
                     <div class="col-lg-6">
                         <img src="../assets/medicine.svg" alt="COVID-19 Tracker" class="img-fluid">
@@ -40,12 +40,12 @@
 
         <div class="container">
 
-            <select name="" id="StatsDropdown" class="row background_dark rounded-pill px-2 py-2 mb-2 ml-2">
+            <select name="" id="StatsDropdown" class="row background_dark rounded-pill p-2 mb-2 mx-auto mx-lg-n1">
                 <option selected>Worldwide</option>
                 <option>Today</option>
             </select>
 
-            <div class="row text-center shadow-lg pt-3 rounded-pill background_dark mb-5">
+            <div class="row text-center pt-3 rounded-sm rounded-pill background_dark mb-5">
                 <div class="col-sm my-3">
                     <!-- WORLDWIDE CASES -->
                     <h3 class="text-warning globalStats"><%= allData.cases.toLocaleString() %></h3>
@@ -61,7 +61,7 @@
                     <p class="globalStats">Active Cases</p>
 
                     <!-- CRITICAL CASES -->
-                    <h3 class="text-info todayStats d-none"><%= allData.critical.toLocaleString() %></h3>
+                    <h3 class="text-white todayStats d-none"><%= allData.critical.toLocaleString() %></h3>
                     <p class="todayStats d-none">Critical Cases</p>
                 </div>
                 <div class="col-sm my-3">
@@ -82,6 +82,12 @@
                     <h3 class="text-primary todayStats d-none"><%= allData.todayRecovered.toLocaleString() %></h3>
                     <p class="todayStats d-none">Recovered Today</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="alert alert-primary text-center d-md-none scroll_table" role="alert">
+                Scroll right on the table for more info
             </div>
         </div>
 

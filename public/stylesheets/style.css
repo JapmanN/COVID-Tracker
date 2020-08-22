@@ -16,3 +16,37 @@ tbody.table-body {color: rgb(136, 146, 176); font-size: 0.9rem;}
 .display-4 {color: rgb(204, 214, 246); font-weight: 600;}
 .badge {color: rgb(0, 25, 47); background:rgba(138, 200, 255, 1); font-weight: 600;}
 .background_dark {background: #333333;}
+.scroll_table {font-size: 0.9rem;}
+
+/* ================= */
+/* MEDIA BREAKPOINTS */
+/* ================= */
+@media (max-width: 991px) {
+    div.background_dark {
+        background: none;
+    }
+    .jumbotron {
+        text-align: center;
+    }
+    br {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    body {
+        padding-top: 20px;
+    }
+    .display-4 {
+        font-size: 2rem;
+        padding: 3px 0
+    }
+}
+
+@media (max-width: 425px) {
+    .display-4 { font-size: 1.769rem; }
+}
+
+@media (max-width: 320px) {
+    .display-4 { font-size: 1.4rem; }
+}

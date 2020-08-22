@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
     });
 });
 
+// ERROR ROUTE (redirect user back to homepage)
 app.get("*", (req, res) => {
     res.redirect("/");
 });

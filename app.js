@@ -11,6 +11,10 @@ api           = require('novelcovid');
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
+api.settings({
+    baseUrl: 'https://disease.sh'
+});
+
 // ==========
 // APP ROUTES
 // ==========

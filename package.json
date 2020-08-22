@@ -4,6 +4,7 @@
   "description": "A web application that tracks the number of COVID-19 cases",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Japman Nagra",

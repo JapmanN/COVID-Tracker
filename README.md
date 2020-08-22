@@ -31,7 +31,7 @@ Use `npm install` to install `node_modules` and all of the packages within it.
 
 Use the `node app.js` command in the terminal and open [http://localhost:3000/](http://localhost:3000/) to view it in your browser
 
-> You will need `node` and `npm` installed globally on your machine before you do these steps.
+> You will need `node` and `npm` installed on your machine before you do these steps.
 
 ## Technologies Used
 

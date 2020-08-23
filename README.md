@@ -4,7 +4,7 @@
 
 The user can filter viewing by all-time cases or today's cases when they first load up the application. Furthermore, the user can also view the rankings of each country and view each country's confirmed cases, active cases, critical cases, deaths, and recoveries.
 
-Click the link to see the application in action.
+Click the [link](https://covid-cases-tracker.herokuapp.com) to see the application in action.
 
 ## Project Screenshots
 
@@ -16,7 +16,7 @@ Click the link to see the application in action.
 
 ![Screenshot of table showing each country's metrics](https://github.com/JapmanN/COVID-Tracker/blob/master/public/assets/screenshots/table_pic.PNG?raw=true)
 
-***Note:*** all data used for the table and metrics is sourced from https://disease.sh. They use data from  [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19), the [New York Times](https://github.com/nytimes/covid-19-data), [Worldometers](https://www.worldometers.info/coronavirus/), and [Apple reports](https://github.com/ActiveConclusion/COVID19_mobility) to give comprehensive access to view the data.
+***Note:*** all data used for the table and metrics is sourced from https://disease.sh. They use data from  [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19), the [New York Times](https://github.com/nytimes/covid-19-data), [Worldometers](https://www.worldometers.info/coronavirus/), and [Apple reports](https://github.com/ActiveConclusion/COVID19_mobility) to give comprehensive access to the data.
 
     api.settings({
 	    baseUrl: 'https://disease.sh'

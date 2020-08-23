@@ -13,6 +13,7 @@ Click the link to see the application in action.
 ![Screenshot of header](https://github.com/JapmanN/COVID-Tracker/blob/master/public/assets/screenshots/header_pic.PNG?raw=true)
 
 ***Table showing each country's metrics:***
+
 ![Screenshot of table showing each country's metrics](https://github.com/JapmanN/COVID-Tracker/blob/master/public/assets/screenshots/table_pic.PNG?raw=true)
 
 ***Note:*** all data used for the table and metrics is sourced from https://disease.sh. They use data from  [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19), the [New York Times](https://github.com/nytimes/covid-19-data), [Worldometers](https://www.worldometers.info/coronavirus/), and [Apple reports](https://github.com/ActiveConclusion/COVID19_mobility) to give comprehensive access to view the data.
